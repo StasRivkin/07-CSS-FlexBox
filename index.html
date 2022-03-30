@@ -4,14 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox</title>
+    <title>Forms</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <div class="flex-container">
-        <div class="item red">1</div>
-        <div class="item green">2</div>
-        <div class="item blue">3</div>
-    </div>
+    <form name="registration" action="#" method="get">
+        <fieldset>
+
+            <legend>
+                Personal data
+            </legend>
+
+            <p>
+                <label for="firstName">Enter First Name :
+                </label>
+                <input id="firstName" type="text" name="firstName" placeholder="John"/>
+            </p>
+
+            <p>
+                <label>
+                    Enter Last Name :
+                    <input type="text" name="lastName" placeholder="Smith"/>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Enter E-Mail :
+                    <input type="email" name="EMail" required autofocus/>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Enter Password :
+                    <input type="password" name="password"/>
+                </label>
+            </p>
+
+            <p>
+                Gender :
+                <label>
+                    Male :
+                    <input type="radio" name="Gender" value="Male" checked>
+                </label>
+                <label>
+                    Female :
+                    <input type="radio" name="Gender" value="Female"/>
+                </label>
+            </p>
+
+            <p>
+                Hobby : 
+                <label>
+                    Vodka
+                    <input type="checkbox" name="Vodka"/>
+                </label>
+                <label>
+                    Cannabis
+                    <input type="checkbox" name="Cannabis"/>
+                </label>
+                <label>
+                    Sex
+                    <input type="checkbox" name="Sex"/>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Birth date :
+                    <input type="date" name="Date"/>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Car :
+                    <select name="Car">
+                        <option value="Toyota">
+                            Toyota
+                        </option>
+                        <option value="Opel">
+                            Opel
+                        </option>
+                        <option value="BMW">
+                            BMW
+                        </option>
+                    </select>
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Comment :
+                    <textarea name="Comment"></textarea>
+                </label>
+            </p>
+
+        </fieldset>
+
+        <input type="submit" value="Send"/>
+        <input type="reset" value="Clear">
+        <input type="button" value="Back">
+        <input type="button" value="Forward">
+        
+    </form>
 </body>
 </html>
