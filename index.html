@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fake</title>
+    <title>exchange rates</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <form name="fake" action="https://jsonplaceholder.typicode.com/posts">
-    <label>
-        User id :
-        <input type="number" name="userId" min="1" max="20">
-    </label>
+    <form name="fake" action="http://data.fixer.io/api/latest">
+    <p>
+        <label>
+            Access key :
+            <input type="access_key" name="access_key" >
+        </label>
+    </p>
+    <p>
+        <label>
+            Base rate :
+            <label>
+                USD
+                <input type="radio" value="USD" name="base">
+            </label>
+            <label>
+                GBP
+                <input type="radio" value="GBP" name="base">
+            </label>
+            <label>
+                NIS
+                <input type="radio" value="NIS" name="base">
+            </label>
+        </label>
+    </p>
+    <p>
+        Currencies :
+        <label>
+            USD
+            <input type="checkbox" value="USD" name="symbols">
+        </label>
+        <label>
+            AUD
+            <input type="checkbox" value="AUD" name="symbols">
+        </label>
+        <label>
+            CAD
+            <input type="checkbox" value="CAD" name="symbols">
+        </label>
+    </p>
     <input type="submit" value="send">
+    <input type="reset" value="clear">
     </form>
 </body>
 </html>
